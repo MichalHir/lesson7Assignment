@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<script>
+  </head>
+  <script>
     //פונקציה שמקבל 3 מספרים ומחזירה את הגדול ביותר. ב-3 דרכים (לא חובה ליום שישי - אתגר)
-// א. שימוש בתנאי
-// ב. שימוש בפונקציה פנימית
-// ג. שימוש בספרייה חיצונית Math.max
+    // א. שימוש בתנאי
+    // ב. שימוש בפונקציה פנימית
+    // ג. שימוש בספרייה חיצונית Math.max
+    let max = 0;
+    let number1 = prompt("enter a number");
+    let number2 = prompt("enter a number");
+    let number3 = prompt("enter a number");
+    if (number1 >= number2) {
+      max = number1;
+    } else {
+      max = number2;
+    }
+    if (max < number3) {
+      max = number3;
+    }
+    console.log(max);
 
-</script>
-<body>
-    
-</body>
+    function max1(num1, num2, num3) {
+      let max = 0;
+      if (num1 >= num2) {
+        max = num1;
+      } else {
+        max = num2;
+      }
+      if (max < num3) {
+        max = num3;
+      }
+      return max;
+    }
+    console.log(max1(1, 2, 3));
+    console.log(max1(3, 2, 1));
+    console.log(max1(1, 3, 2));
+
+    console.log(Math.max(number1, number2, number3));
+  </script>
+  <body></body>
 </html>
