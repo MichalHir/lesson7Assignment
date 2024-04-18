@@ -41,6 +41,24 @@
     console.log(max1(1, 3, 2));
 
     console.log(Math.max(number1, number2, number3));
+
+    //     כתבו פונקציה שבודקת אם מספר גדול משני מספרים אחרים
+    // כעת הגדירו 3 מספרים , וקראו לפונקציה - אם המספר גדול - הדפיסו big אחרת NOT
+    function big(big, small1, small2) {
+      let ifBig = true;
+      if (big < small1 || big < small2) {
+        ifBig = false;
+      }
+      return ifBig;
+    }
+    let bigNumber = prompt("enter a  big number");
+    let smaNumber1 = prompt("enter a  small number");
+    let smaNumber2 = prompt("enter a another small number");
+    if (big(bigNumber, smaNumber1, smaNumber2) == true) {
+      console.log("big");
+    } else {
+      console.log("not");
+    }
   </script>
   <body></body>
 </html>
