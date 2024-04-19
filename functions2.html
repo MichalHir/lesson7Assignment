@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1. Write a function that takes two numbers as parameters and returns the larger one.
+      function bigNumber(num1, num2) {
+        if (num1 >= num2) {
+          return num1;
+        } else {
+          return num2;
+        }
+      }
+      console.log(bigNumber(8, 9));
+
+      // 2. Write a function that takes a number as a parameter and returns "even" if the number is even, and "odd" if it's odd.
+      function evevOdd(num) {
+        if (num % 2 == 0) {
+          return 'even';
+        } else {
+          return 'odd';
+        }
+      }
+      console.log(evevOdd(8));
+
+      // 3. Write a function that takes a string as a parameter and returns the string reversed.
+      let str = 'abcdefgh';
+      function reverser(string) {
+        let newString = '';
+        for (let i = string.length - 1; i >= 0; i--) {
+          newString += string.charAt(i);
+        }
+        return newString;
+      }
+      console.log(reverser(str));
+
+      // 4. Write a function that takes a string and a number as parameters and returns the string repeated the specified number of times.
+      function multy(string, num) {
+        let newString1 = string.repeat(num);
+        return newString1;
+      }
+      console.log(multy(str, 2));
+
+      // 5. Write a function that takes a number as a parameter and returns true if it's a prime number, and false otherwise.
+      // להדפיס את כל המספרים הראשוניים עד המספר בתרגיל 1
+      // let n = 2;
+      // i = 3;
+      // let ifPrimery = true;
+      // console.log("primary numbers");
+      // debugger;
+      // while (i < 50) {
+      //   ifPrimery = true;
+      //   n = 2;
+      //   while (ifPrimery == true && n < i) {
+      //     if (i % n == 0) {
+      //       ifPrimery = false;
+      //     }
+      //     n++;
+      //   }
+      //   if (ifPrimery == true) {
+      //     console.log(i);
+      //   }
+      //   i++;
+      function primary(num3) {
+        let ifPrimery = true;
+        let n=2
+        while (ifPrimery == true && n < num3) {
+            if (num3 % n == 0) {
+              ifPrimery = false;
+            }
+            n++;
+        }
+        return ifPrimery
+      }
+      console.log(primary(116))
+      // 6. Write a function that takes a string as a parameter and returns the number of vowels (a, e, i, o, u) in the string.
+      function vowel(string) {
+        let j=0
+        for (let i = 0; i < string.length; i++) {
+            if (string.charAt(i)=='a' || string.charAt(i)=='e' || string.charAt(i)=='i') {
+                j++
+            }
+            if (string.charAt(i)=='o' || string.charAt(i)=='u') {
+                j++
+            }
+      }
+        return j
+      }
+      console.log(vowel(str))
+      
+      // 7. Write a function that takes a number as a parameter and returns the factorial of that number.
+      // 8. Write a function that takes a string as a parameter and returns true if the string is a palindrome, and false otherwise.
+    </script>
+  </body>
+</html>
