@@ -67,33 +67,65 @@
       //   i++;
       function primary(num3) {
         let ifPrimery = true;
-        let n=2
+        let n = 2;
         while (ifPrimery == true && n < num3) {
-            if (num3 % n == 0) {
-              ifPrimery = false;
-            }
-            n++;
+          if (num3 % n == 0) {
+            ifPrimery = false;
+          }
+          n++;
         }
-        return ifPrimery
+        return ifPrimery;
       }
-      console.log(primary(116))
+      console.log(primary(116));
       // 6. Write a function that takes a string as a parameter and returns the number of vowels (a, e, i, o, u) in the string.
       function vowel(string) {
-        let j=0
+        let j = 0;
         for (let i = 0; i < string.length; i++) {
-            if (string.charAt(i)=='a' || string.charAt(i)=='e' || string.charAt(i)=='i') {
-                j++
-            }
-            if (string.charAt(i)=='o' || string.charAt(i)=='u') {
-                j++
-            }
+          if (
+            string.charAt(i) == 'a' ||
+            string.charAt(i) == 'e' ||
+            string.charAt(i) == 'i'
+          ) {
+            j++;
+          }
+          if (string.charAt(i) == 'o' || string.charAt(i) == 'u') {
+            j++;
+          }
+        }
+        return j;
       }
-        return j
-      }
-      console.log(vowel(str))
-      
+      console.log(vowel(str));
+
       // 7. Write a function that takes a number as a parameter and returns the factorial of that number.
+      function factorial(num) {
+        let factorial = 1;
+        for (let i = 2; i <= num; i++) {
+          factorial *= i;
+        }
+        return factorial;
+      }
+      console.log(factorial(3));
+
       // 8. Write a function that takes a string as a parameter and returns true if the string is a palindrome, and false otherwise.
+      function palindrome(phrase) {
+        debugger;
+        let ifPali = true;
+        let i = 0;
+        // let char1 = ''; // testing
+        // let char2 = ''; // testing
+        while (i < phrase.length / 2 && ifPali == true) {
+          // char1 = phrase.charAt(i); // testing
+          // char2 = phrase.charAt(phrase.length - 1 - i); // testing
+          if (phrase.charAt(i) != phrase.charAt(phrase.length - 1 - i)) {
+            ifPali = false;
+          } 
+          i++;
+        }
+        return ifPali;
+      }
+      console.log(palindrome('rtyytr'));
+      console.log(palindrome('rtyjktr'));
+      console.log(palindrome('rtykytr'));
     </script>
   </body>
 </html>
